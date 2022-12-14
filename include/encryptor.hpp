@@ -8,8 +8,8 @@ using namespace std;
 class Encryptor {
 public:
     Encryptor(string key);
-    string encrypt(string text);
-    string decrypt(string text);
+    string encrypt(string &text);
+    string decrypt(string &text);
 private:
     string SHA_256(string);
     string key;
