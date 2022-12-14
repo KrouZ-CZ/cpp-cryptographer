@@ -2,7 +2,7 @@
 
 Encryptor::Encryptor(string key) : key(key) {}
 
-string Encryptor::encrypt(string text) {
+string Encryptor::encrypt(string &text) {
     using namespace macaron;
     string result;
     AES instance = AES(SHA_256(key));
@@ -26,7 +26,7 @@ string Encryptor::encrypt(string text) {
     return result;
 }
 
-string Encryptor::decrypt(string text) {
+string Encryptor::decrypt(string &text) {
     using namespace macaron;
     string result, of_res, out;
     AES instance = AES(SHA_256(key));
